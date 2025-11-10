@@ -7,3 +7,9 @@ class ReadConfig:
     @staticmethod
     def getApplicationURL():
         return config.get('common info', 'baseURL')
+
+    def getEmail(self):
+        return config.get('common info', 'Email')
+
+    def getPassword(self):
+        return config.get('common info', 'password')
