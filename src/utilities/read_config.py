@@ -8,8 +8,10 @@ class ReadConfig:
     def getApplicationURL():
         return config.get('common info', 'baseURL')
 
-    def getEmail(self):
-        return config.get('common info', 'Email')
+    @staticmethod
+    def getEmail():
+        return config.get('common info', 'email')
 
-    def getPassword(self):
-        return config.get('common info', 'password')
+    @staticmethod
+    def get_verification_code():
+        return config.get('common info', 'verification_code')
