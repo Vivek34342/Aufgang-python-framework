@@ -3,11 +3,11 @@ import logging
 class LogGen:
     @staticmethod
     def loggen():
+        logging.basicConfig(filename=".\\logs\\automation.log",
+                            format='%(asctime)s:%(levelname)s:%(message)s',
+                            datefmt='%m/%d/%Y %I:%M:%S %p',
+                            force=True)
+
         logger = logging.getLogger()
-        if not logger.hasHandlers():
-            fileHandler = logging.FileHandler("./logs/automation.log", mode='a')
-            formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s', '%d-%b-%y %H:%M:%S')
-            fileHandler.setFormatter(formatter)
-            logger.addHandler(fileHandler)
-            logger.setLevel(logging.INFO)
+        logger.setLevel(logging.INFO)
         return logger
