@@ -32,7 +32,7 @@ class Test_001_Login:
             self.logger.info("test_verify_page_title_FAILED")
             assert False
 
-
+    @pytest.mark.smoke
     def test_login(self,setup):
         self.logger.info("Test_001_Login.test_login")
         self.logger.info("Starting test_login")
